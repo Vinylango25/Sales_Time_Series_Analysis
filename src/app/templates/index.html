@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS -->
+    <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="{{ url_for('static', filename='css/waterfall.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/areachart.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/ValidationTS.css') }}" rel="stylesheet">
+
+    <!-- Javascript -->
+
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/formcontrols.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.js')}}"></script>
+    <script src="{{url_for('static', filename='js/demo.js')}}"></script>
+    <script src="{{url_for('static', filename='js/d3.v4.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/waterfall.js')}}"></script>
+    <script src="{{url_for('static', filename='js/ValidationTS.js')}}"></script>
+    <script src="{{url_for('static', filename='js/areachart.js')}}"></script>
+
+    
+    <title> Sales Analyzer </title>
+  </head>    
+  <body>
+    {% include 'navbar.html' %}
+    <div class="container-fluid" style="padding-top:10px;">
+      {% include 'configure.html' %}
+    </div>
+    
+    <!-- Click here: <button onclick="test()" >Click me</button> -->
+
+    <script type="text/javascript">
+
+      $(document).ready(function() {
+	  $('#home').addClass('active');
+	  $('#forecast').removeClass('active');	  
+    $('#ValidationTS').removeClass('active');  
+      });
+    </script>
+  </body>
+</html>
+

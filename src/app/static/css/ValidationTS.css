@@ -1,0 +1,34 @@
+.cv-text {
+  font-family: "Lato";
+  font-size: 2.1em;
+  fill: black;
+}
+
+.piechart {
+  margin: 20px;
+}
+
+
+.piechart text {
+  font-family: "Lato";
+  fill: #888;
+}
+
+
+.piechart .name-text{
+  font-size: 2.0em;
+}
+
+.piechart .store-text{
+  font-size: 1.4em;
+  fill: black;
+}
+
+.piechart .value-text{
+  font-size: 2.8em;
+}
+
+.piechart .title {
+  font-size: 2.2em;
+  fill: black;
+}

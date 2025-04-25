@@ -1,0 +1,105 @@
+<form action="{{ url_for('retrain') }}" method="post">
+  <div class="form-group">
+    <label for="exampleFormControlSelect1">Algorithm</label>
+    <select class="form-control" id="algorithm" name="algorithm" onclick="show_hide_params()">
+      <option value="" selected disabled>Please select</option>      
+      <option value="arima">ARIMA</option>
+      <option value="xgboost">XGBoost</option>
+      <option value="lstm">LSTM</option>
+    </select>
+  </div>
+
+  <div id="trainend">
+    <div class="form-group">
+      <label for="">Train End Date</label>
+      <input type="text" class="form-control" name="train_end_date" placeholder="2014/4/1"/>
+    </div>
+  </div>
+
+  <div id="forecaststart">
+    <div class="form-group">
+      <label for="">Forecast Start Date</label>
+      <input type="text" class="form-control" name="forecast_start_date" placeholder="2014/6/1"/>
+    </div>
+  </div>
+
+  
+  <div id="parameters">
+  <h3 class="title" style="font-family: 'Lato">Parameters</h3>
+
+  <!-- XGBoost -->
+  <div id="xgboostparams">
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">learning_rate</label>
+      <input type="text" class="form-control" name="learning_rate" />    
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">max_depth</label>
+      <input type="text" class="form-control" name="max_depth" />        
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">n_estimators</label>
+      <input type="text" class="form-control" name="n_estimators" />    
+    </div>
+
+  </div>
+  
+  <!-- LSTM params -->
+  <div id="lstmparams">  
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">learning_rate</label>
+      <input type="text" class="form-control" name="learning_rate_lstm" />    
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">optimizer</label>
+      <input type="text" class="form-control" name="optimizer" />    
+    </div>
+
+  </div>	    
+
+    <!-- ARIMA params -->
+  <div id="arimaparams">  
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">p</label>
+      <input type="text" class="form-control" name="p" />    
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">q</label>
+      <input type="text" class="form-control" name="q" />    
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputEmail1">d</label>
+      <input type="text" class="form-control" name="d" />    
+    </div>
+
+  </div>	
+  
+  <!-- <div class="form-check"> -->
+  <!--   <input type="checkbox" class="form-check-input" id="exampleCheck1"> -->
+  <!--   <label class="form-check-label" for="exampleCheck1">Check me out</label> -->
+  <!-- </div> -->
+
+  
+  <button type="submit" class="btn btn-primary">Retrain</button>
+
+  </div>
+  
+</form>
+
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+      $("#algorithm").attr('disabled', true);
+      $("#algorithm").attr('disabled', false);
+      $('#parameters').hide();
+  });
+</script>  

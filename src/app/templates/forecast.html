@@ -1,0 +1,40 @@
+  <div class="form-group" style="margin-left:20px">
+    <label for="foo">Algorithm for forecast: </label>
+    <select class="form-control" id="predalgorithm" onchange="showpred()" style="width:200px">
+      <!-- <option value="" selected disabled>Please select</option>       -->
+      <option value="lstm">LSTM</option>
+      <option value="arima">ARIMA</option>
+      <option value="xgboost">XGBoost</option>
+    </select>
+  </div>
+  
+<hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+<div class="row">
+  <div class="col-md-12" style="padding-top:5px;">
+    <h3 class="title" style="font-family: 'Lato"> Model Quality <i class="fas fa-chart-pie"></i></h3>
+    <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+    <div id='viz1'>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6" style="padding-top:5px;">
+    <h3 class="title" style="font-family: 'Lato"> Historic Trends <i class="fas fa-chart-area"></i></h3>
+    
+    <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+    <h4 style="font-family: 'Lato';font-size: 25px;" id="_please_dont_delete_this">Period: July 2012 - April 2014</h4>   
+    <div id='viz2'>
+    </div>   
+  </div>
+  
+  <div class="col-md-6" style="padding-top:5px; display:none" id="forecast-div">
+    <h3 class="title" style="font-family: 'Lato'">Daily Price Variations <i class="far fa-chart-bar"></i></h3>
+    <hr style="width: 100%; color: black; height: 1px; background-color:black;" />
+    <h4 style="font-family: 'Lato';font-size: 25px;" id="location"></h4>   
+    <div id='viz3'>
+      <svg class="chart" id="water-chart"></svg>
+    </div>
+  </div>
+  
+</div>
