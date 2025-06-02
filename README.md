@@ -156,14 +156,11 @@ There would be two types of consumers for our visualizations:
 
 <p align="justify"> The original sketch demonstrated to plot the daily variation of prices from a base price, in the up or down direction. Instead of this idea, a waterfall model plot will be used. The plot will show the increase or decrease in price from the previous day, keeping the previous day as the baseline. The bars in the plot will be encoded in two colors, showing the rise or fall from the previous day’s sale. In addition, the plot will also present the percentage of increase in price from the previous day above the bars. </p>
 
-![alt text](images/InitialSketch-WaterFall.png)
 ![alt text](images/WaterFall-2.png)
 
 - Validation Chart
 
 <p align="justify"> We have used Forward validation technique to evalute the time series data. The initial design had only the line chart with the validation results using 6 steps of size 30 days. In order to incorporate the store location feature we brought Pie chart and linked with line chart based on the location where each arc of the pie indicates the average sales in that particular store and also changed the number of forward validation steps to 3 steps with step size of 60 days from the forecast date selected by user.  </p>
-
-![alt text](images/InitialSketch-ValPlot.png)
 
 <p align="justify"> In order to display the average sales value of a store, we changes the pie chart to doughnut chart where the area inside inner circle is used to display the average sales information using onhover functionality. Also we used onclick function to show the model performance of store selected by the user on pie chart. </p>
 
